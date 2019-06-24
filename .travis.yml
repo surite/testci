@@ -1,0 +1,16 @@
+language: java
+jdk: openjdk8
+
+env:
+- envtest1=zhihuil1234 envtest2=zhihuil2
+
+before_install:
+ - chmod +x mvnw
+
+script:
+  - echo "------------env start------------"
+  - echo $envtest1
+  - echo $envtest2
+  - echo "------------env end------------"
+  - pwd && ls -la
+  - mvn package
